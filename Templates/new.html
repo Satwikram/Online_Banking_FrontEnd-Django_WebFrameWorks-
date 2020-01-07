@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New User</title>
+    <link rel="stylesheet" href="loan.css">
+    <script src="loan.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+
+    <div class = "loan" style="max-width:500px">
+      <img class="mySlides" src="https://cdn2.newsstate.com/images/personal-financehome-loan-40-5-79_5.jpg" style="width:270%">
+      <img class="mySlides" src="https://www.mycarhelpline.com/images/easyblog_articles/563/100-percent-car-loan-finance.jpg" style="width:270%">
+      <img class="mySlides" src="https://www.icicibank.com/managed-assets/images/blog/big/advantages-applying-personal.jpg" style="width:270%">
+
+    </div>
+    <script>
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 5000);
+  }
+  </script>
+
+
+    <h1 style="text-align: center"> LOAN APPLICATION </h1>
+    <form name="LoanForm" action="" onsubmit="return loan()" method="get">
+
+    	<p>Name: <input type="text" size=65 name="name"> </p><br>
+      <p>Account Number: <input type="number" size=65 name="acno"> </p><br>
+    	<p> Address: <input type="textarea" size=70 name="address"> </p><br>
+    	<p>E-mail Address: <input type="email" size=65 name="email"> </p><br>
+      <p>Phone: <input type="number" size=65 name="ph"> </p><br>
+      <p>Loan Amount: <input type="number" size=65 name="la"> </p><br>
+
+    	<p>Select Tennure in months
+    		<select type="number" value="" name="tennure">
+          <option>0</option>
+    			<option>12</option>
+    			<option>18</option>
+    			<option>24</option>
+    			<option>36</option>
+    			<option>48</option>
+          <option>60</option>
+    		</select></p><br><br>
+    	<p>Comments: <textarea cols="55" name="Comment"> </textarea></p><br>
+    	<p><input type="submit" value="Submit" name="Submit">
+    		<input type="reset" value="Reset" name="Reset">
+    	</p>
+    </form>
+</body>
+</html>

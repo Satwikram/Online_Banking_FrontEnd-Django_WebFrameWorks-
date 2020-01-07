@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+  </head>
+  <body>
+    <h1>Transfer</h1>
+
+
+    <form name="transfer" action="transfer" onsubmit="" method="post">
+      {% csrf_token %}
+
+
+      <p>Enter Acount holder Phone number: <input type="number" size=65 name="ph"> </p><br><br>
+      <p>Enter Amount: <input type="number" size=65 name="amount"> </p><br>
+
+      <p><input type="submit" value="Transfer" name="transfer">
+
+    </form>
+
+    <h2>You have recieved a cash back of:</h2>
+    <h3>{{data.cashback}}</h3>
+
+    {% if messages %}
+      {% for message in messages %}
+        {{message}}
+        <br>
+        <br>
+      {% endfor %}
+    {% endif %}
+    <br>
+    <br>
+<!--
+    <form name="stored" action="Stored" method="post">
+      {% csrf_token %}
+
+      <input type="submit" name="Stored" value="submit">
+    </form>
+-->
+
+    <a href="main"> Back </a>
+
+
+
+
+  </body>
+</html>

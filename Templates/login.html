@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+    <script src="{% static 'js/login.js' %}" charset="utf-8"></script>
+    <title>Log IN</title>
+  </head>
+  <body>
+
+<h2>Login </h2>
+
+   <form name="login" action="Login" style="border:1px solid #ccc" onsubmit= "return login()" method="post">
+     {% csrf_token %}
+
+
+    <div class="container">
+    <label for="ph"><b>Phone Number</b></label>
+    <input type="text" placeholder="Enter Phone Number" name="ph">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw">
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="reset" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="forgot">password?</a></span>
+  </div>
+</form>
+<br>
+<br>
+<br>
+
+
+<marquee behavior="scroll" direction="left">Please Don't save password in any google pages</marquee>
+<br>
+
+
+    {% if messages %}
+      {% for message in messages %}
+        {{message}}
+      {% endfor %}
+    {% endif %}
+
+
+
+
+
+
+
+  </body>
+</html>

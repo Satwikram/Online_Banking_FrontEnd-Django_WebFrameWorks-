@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to e Banking</title>
+    <link rel="stylesheet" href="{% static 'styles/master.css' %}">
+
+  </head>
+
+
+  <header>
+    <ul>
+      <li><a href="details/Register">New User?</li>
+      <li><a href="details/about">About us</li>
+      <li><a href="details/contact"> Contact us</li>
+      <li><a href="details/term">Terms and Conditions</li>
+      <li><a href="details/Login"> Login</li>
+      </a>
+
+
+    </ul>
+
+  </header>
+
+  <body>
+
+    <h2 class="center">Welcome to Easy Pay, Banking made simple.</h2>
+
+
+    <div style="max-width:500px">
+      <img class="mySlides" src="https://www.icicibank.com/managed-assets/images/personal/internet-banking/desktop-banner/IA-count-on-us-d.jpg" style="width:300%">
+      <img class="mySlides" src="https://www.edgeverve.com/wp-content/uploads/2018/12/16200_shutterstock_178593722-1.png" style="width:300%">
+      <img class="mySlides" src="https://www.icicibank.com/managed-assets/images/blog/big/advantages-applying-personal.jpg" style="width:270%">
+
+    </div>
+    <script>
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 5000);
+  }
+  </script>
+
+
+
+    <div class="st">
+      <p>OUR Bank is a leading private sector bank in India. The Bank’s consolidated total assets stood at Rs.12.50 trillion at June 30, 2019. OUR Bank currently has a network of 4,882 branches and 15,101 ATMs across India.</p>
+      <h2>History:</h2>
+      <p>OUR Bank was originally promoted in 1994 by ICICI Limited, an Indian financial institution, and was its wholly-owned subsidiary.</p>
+      <h2>Groups and companies</h2>
+      <p>OUR Bank offers a wide range of banking products and financial services to corporate and retail customers through a variety of delivery channels and through its group companies.</p>
+
+      <h2>Feautres of Internet Banking</h2>
+      <ul>
+        <li1>Check account statement</li1><br>
+        <li1>Balance Enquery</li1><br>
+        <li1>Money Transfer</li1><br>
+        <li1>Mobile Recharge</li1><br>
+        <li1>Deposit</li1>
+      </ul>
+
+   </div>
+
+
+</body>
+
+</html>

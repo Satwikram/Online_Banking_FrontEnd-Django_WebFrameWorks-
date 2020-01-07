@@ -1,0 +1,27 @@
+form {border: 3px solid #f1f1f1;}
+
+	input[type=text], input[type=number], input[type=email], input[type=textarea], input[type=password] {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+	}
+
+
+div9 {
+	box-sizing: border-box;
+	width: 100%;
+	border: 100px solid black;
+	float: left;
+	align-content: center;
+	align-items: center;
+}
+
+.mySlides{
+  height: 480px;
+
+  background-size: cover;
+  width: auto;
+}

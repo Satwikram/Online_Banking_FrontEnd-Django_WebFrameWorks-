@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>register</title>
+    <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+    <script src="{% static 'js/register.js' %}" charset="utf-8"></script>
+
+      </head>
+  <body>
+
+
+    <div class = "register" style="max-width:500px">
+      <img class="mySlides" src="https://www.myloancare.in/getfile/images/credit-card-615.jpg" width="270%" height="1%">
+      <img class="mySlides" src="https://www.mycarhelpline.com/images/easyblog_articles/563/100-percent-car-loan-finance.jpg" style="width:270%">
+      <img class="mySlides" src="https://www.icicibank.com/managed-assets/images/blog/big/advantages-applying-personal.jpg" style="width:270%">
+
+    </div>
+    <script>
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 5000);
+  }
+  </script>
+
+
+    <h1 style="text-align: center">Please Fill the form to register. </h1>
+    <form name="rform" action="Register" onsubmit="return register()" method="post">
+      {% csrf_token %}
+<div>
+      <p><b>First Name:</b>: <input type="text" size=65 name="fname"> </p><br>
+      <p><b>Last Name:</b> <input type="text" size=65 name="lname"> </p><br>
+    	<p><b>Name:</b> <input type="text" size=65 name="name"> </p><br>
+    	<p><b>Address:</b> <input type="textarea" size=70 name="address"> </p><br>
+      <p><b>E-mail Address: </b><input type="email" size=65 name="email"> </p><br>
+      <p><b>Password:</b> <input type="password" size=65 name="psw"> </p><br>
+      <p><b>Confirm Password:</b> <input type="password" size=65 name="psw1"> </p><br>
+      <p><b>Phone:</b> <input type="number" size=65 name="ph"> </p><br>
+      <p><b>Account Number:</b> <input type="number" size=65 name="acno"> </p><br>
+      <p><b>IFSC:</b> <input type="number" size=65 name="ifsc"> </p><br>
+
+
+
+      <div class="container" style="background-color:#f1f1f1">
+      <button type="reset" class="cancelbtn">Cancel</button>
+      <button type="submit" class="sub">Submit</button>
+
+      </div>
+    	</p>
+    </form>
+</div>
+    {% if messages %}
+      {% for message in messages %}
+        {{message}}
+      {% endfor %}
+    {% endif %}
+
+  <a href="\">Back</a>
+  <br>
+  <br>
+  <br>
+
+</body>
+</html>

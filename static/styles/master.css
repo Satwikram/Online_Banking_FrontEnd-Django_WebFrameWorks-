@@ -1,0 +1,43 @@
+body{
+      jbackground-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/P3IPDsA/4k-account-summary-online-banking-tablet_4y-4akkr__F0000.png");
+      background-size: cover;
+      background-attachment: fixed;
+      border:2px solid-black;
+
+}
+ul{
+list-style-type: none;
+margin: left;
+padding: 15px;
+overflow: hidden;
+background-color: orange;
+}
+
+li
+{
+display:inline;
+padding:10px;
+color:white;
+text-decoration: none;
+}
+
+
+li:hover {
+      background-color: red;
+      color:white;
+
+    }
+.text{
+  text-align:
+  color: black;
+}
+.mySlides{
+  height: 480px;
+
+  background-size: cover;
+  width: auto;
+}
+.st{
+   color: blue;
+
+}
